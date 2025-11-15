@@ -4,7 +4,7 @@
 [![DOI](https://zenodo.org/badge/11797525.svg)](https://zenodo.org/badge/latestdoi/11797525)
 [![PyPI version](https://badge.fury.io/py/popeye.svg)](https://badge.fury.io/py/popeye)
 
-popeye
+popeye (modified for numpy>2.0)
 ======
 
 popeye is a Python module for estimating population receptive fields
@@ -35,7 +35,7 @@ You can install popeye and its dependencies through PyPi:
 
 Or you can install from the source. To install in your home directory, use:
 
-    python setup.py install --user
+    pip install --user .
 
 To install for all users on Unix/Linux:
 

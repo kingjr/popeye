@@ -459,5 +459,6 @@ class VisualStimulus(StimulusModel):
         
         # add ppd for the down-sampled stimulus
         self.ppd0 = pixels_per_degree(self.pixels_across*self.scale_factor, self.screen_width, self.viewing_distance)
-        
-        
+        self.stim_arr0 = np.ascontiguousarray(self.stim_arr0, dtype=np.int16)
+        self.stim_arr = np.ascontiguousarray(self.stim_arr, dtype=np.int16)
+

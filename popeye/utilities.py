@@ -16,8 +16,9 @@ import nibabel
 from scipy.stats import gamma
 from scipy.optimize import brute, fmin_powell, fmin, least_squares, minimize
 from scipy.stats import linregress
-from scipy.integrate import romb, trapz
-from scipy import c_, ones, dot, stats, diff
+from scipy.integrate import romb
+from numpy import trapz, c_, ones, dot, diff
+from scipy import stats
 from scipy.linalg import inv, solve, det, norm
 from numpy import log, pi, sqrt, square, diagonal
 from numpy.random import randn, seed
@@ -1053,7 +1054,9 @@ def binner(signal, times, bins):
     return binned_response
 
 import sys
-from numpy import NaN, Inf, arange, isscalar, asarray, array
+from numpy import arange, asarray, array
+NaN = np.nan
+Inf = np.inf
 
 def peakdet(v, delta, x = None):
     """

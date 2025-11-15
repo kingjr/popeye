@@ -9,16 +9,14 @@ warnings.simplefilter("ignore")
 
 import numpy as np
 np.set_printoptions(suppress=True)
-from scipy.stats import linregress
 from scipy.signal import fftconvolve
-from scipy.integrate import trapz
 
-import nibabel
 import numexpr as ne
 from popeye.onetime import auto_attr
 import popeye.utilities as utils
 from popeye.base import PopulationModel, PopulationFit
 from popeye.spinach import generate_og_receptive_field, generate_rf_timeseries
+
 
 class DifferenceOfGaussiansModel(PopulationModel):
     
