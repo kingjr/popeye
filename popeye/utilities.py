@@ -797,7 +797,7 @@ def xval_bundle(bootstraps, kfolds, Fit, model, data, grids, bounds, indices, au
             if kfolds == 1: # leave one out
                 trn_idx = np.random.choice(runs, len(runs)-1, replace=False)
             else:
-                trn_idx = np.random.choice(runs, np.int(len(runs)/kfolds), replace=False)
+                trn_idx = np.random.choice(runs, len(runs)/kfolds, replace=False)
             
             tst_idx = np.array(list(set(runs)-set(trn_idx)))
             
@@ -817,7 +817,7 @@ def xval_bundle(bootstraps, kfolds, Fit, model, data, grids, bounds, indices, au
 def multiprocess_bundle(Fit, model, data, grids, bounds, indices, auto_fit=True, verbose=1, Ns=None):
     
     # num voxels
-    num_voxels = np.int(np.shape(data)[0])
+    num_voxels = len(data)
     
     # expand out grids and bounds
     grids = [grids,]*num_voxels
